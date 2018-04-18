@@ -1,0 +1,51 @@
+header {    
+  .clearfix();
+
+  min-height: 150px;
+
+  & .logo {
+    float: left;
+    padding: 21px 30px;    
+
+    & a {
+      line-height: 0;
+    }
+  }
+
+  & .title {
+    float: left;
+    padding-top: 26px;
+
+    & h1 {
+      padding: 0;
+      margin: 0;
+      color: @rekord-blue;
+      text-align: left;
+      font-style: italic;
+      text-transform: none;
+      font-weight: normal;
+      font-size: 24px;
+    }
+  }
+
+  & .utilities {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 150px;
+    float: right;
+    padding: 26px 30px;
+    text-align: right;
+
+    &__ftvi {
+      position: absolute;
+      top: 26px;
+      right: 30px;
+    }
+
+    &__search {
+      position: absolute;
+      bottom: 26px;
+      right: 30px;
+    }
+  }
+}
