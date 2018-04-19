@@ -17,9 +17,9 @@
 		endif;
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php kor622017_posted_on();
+			<?php rekord18_posted_on();
 				echo ", ";
-				kor622017_entry_footer();
+				rekord18_entry_footer();
 			?>
 		</div><!-- .entry-meta -->
 		<?php
@@ -30,11 +30,11 @@
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'kor622017' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'rekord18' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kor622017' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'rekord18' ),
 				'after'  => '</div>',
 			) );
 		?>

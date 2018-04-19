@@ -17,9 +17,9 @@
 		endif;
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php kor622017_posted_on();
+			<?php rekord18_posted_on();
 				echo ", ";
-				kor622017_entry_footer();
+				rekord18_entry_footer();
 			?>
 		</div><!-- .entry-meta -->
 		<?php

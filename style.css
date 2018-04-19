@@ -513,13 +513,13 @@ body {
   font-weight: normal;
   line-height: 1.3;
   background-color: #ffffff;
-  background: url(../img/bg-body.jpg) 100% 0 no-repeat fixed, url(../img/bg-body.jpg) 0 0 no-repeat fixed;
+  background: url(/img/bg-body.jpg) 100% 0 no-repeat fixed, url(/img/bg-body.jpg) 0 0 no-repeat fixed;
 }
 .wrapper {
   display: block;
   margin: 0 auto;
   width: 1180px;
-  background: #ffffff url("../img/bg-wrapper.jpg") 100% 0 no-repeat;
+  background: #ffffff url("/img/bg-wrapper.jpg") 100% 0 no-repeat;
   -webkit-box-shadow: 0 0 10px #666;
   box-shadow: 0 0 10px #666;
 }
