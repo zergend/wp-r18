@@ -31,7 +31,8 @@
       <section class="front__news">
         <h2>Новости</h2>
         <?php
-          get_template_part( 'template-parts/content', 'front-news' );
+          include 'template-parts/content-front-news.php';
+          // get_template_part ( 'template-parts/content', 'front-news' );
         ?>
       </section>
 
