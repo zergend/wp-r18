@@ -28,9 +28,9 @@
 		</div>
 		<div class="front__news--foto  size-tmb-225x150">
 			<?php 
-				if ( has_post_thumbnail() ) { // миниатюра			
+				// if ( has_post_thumbnail() ) { // миниатюра			
 				echo kama_thumb_img('w=225 &h=150 &crop=center');
-				}
+				// }
 			?>
 		</div>
 		<div class="front__news--title">
@@ -38,11 +38,7 @@
 				<?php the_title(); ?>
 			</a>
 			<div class="front__news--more">
-				<?php
-					global $more;    // Объявим переменную $more как глобальную (перед Циклом WordPress).
-					$more = 0;       // Изменим значение переменной, чтобы показать только текст до тега more.
-					the_content("Подробнее &nbsp; &rarr;");
-				?>
+				<a href="<?php the_permalink() ?>">Подробнее &nbsp; &rarr;</a>
 			</div>
 		</div>
 
