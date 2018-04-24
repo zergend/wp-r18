@@ -30,54 +30,11 @@
     <div class="front__content">
       <section class="front__news">
         <h2>Новости</h2>
-        <article>
-          <div class="front__news--date">
-            <div class="front__news--day">
-              <span>13</span>
-            </div>
-            <div class="front__news--month">
-              <span>04</span>
-            </div>
-            <div class="front__news--year">
-              <span>18</span>
-            </div>
-          </div>
-          <div class="front__news--foto  size-tmb-225x150">
-            <img src="img.jpg" alt="Фото">
-          </div>
-          <div class="front__news--title">
-            <a href="#">Заголовок новости 1</a>
-            <div class="front__news--more">
-              <a href="#">Подробнее &rarr;</a>
-            </div>
-          </div>
-        </article>
-        <article>
-          <div class="front__news--date">
-            <div class="front__news--day">
-              <span>12</span>
-            </div>
-            <div class="front__news--month">
-              <span>04</span>
-            </div>
-            <div class="front__news--year">
-              <span>18</span>
-            </div>
-          </div>
-          <div class="front__news--foto  size-tmb-225x150">
-            <img src="img\bg-r.jpg" alt="Фото">
-          </div>
-          <div class="front__news--title">
-            <a href="#">Заголовок новости 2</a>
-            <div class="front__news--more">
-              <a href="#">Подробнее &rarr;</a>
-            </div>
-          </div>
-        </article>
-        <div class="front__news--all">
-          <a href="#">Все новости &rarr;</a>
-        </div>
+        <?php
+          get_template_part( 'template-parts/content', 'front-news' );
+        ?>
       </section>
+
       <section class="front__anounce">
         <h2>Объявления</h2>
         <article>
