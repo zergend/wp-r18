@@ -7,6 +7,11 @@
  * @package rekord18
  */
 
+ // обязательный для темы плагин kama thumbnail
+if( ! is_admin() && ! function_exists('kama_thumb_img') ){
+	wp_die('Активируйте обязательный для темы плагин Kama Thumbnail');
+}
+
 if ( ! function_exists( 'rekord18_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -55,7 +60,7 @@ add_theme_support( 'post-formats', array('aside', 'gallery', 'image', 'video') )
 function rekord18_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Левая панель виджетов', 'rekord18' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar-left',
 		'description'   => esc_html__( 'Добавьте виджеты.', 'rekord18' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -64,7 +69,7 @@ function rekord18_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Правая панель виджетов', 'rekord18' ),
-		'id'            => 'sidebar-2',
+		'id'            => 'sidebar-right',
 		'description'   => esc_html__( 'Добавьте виджеты.', 'rekord18' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -73,7 +78,7 @@ function rekord18_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Панель виджетов на главной', 'rekord18' ),
-		'id'            => 'sidebar-3',
+		'id'            => 'sidebar-front',
 		'description'   => esc_html__( 'Добавьте виджеты.', 'rekord18' ),
 		'before_widget' => '<section id="%1$s" class="widget-front-page %2$s">',
 		'after_widget'  => '</section>',

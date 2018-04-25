@@ -24,6 +24,7 @@ var $default_settings = array(
  $this->options["phone"] = $_POST['cp_phone'];
  $this->options["email"] = $_POST['cp_email'];
  $this->options["anounce"] = $_POST['cp_cat-anounce'];
+ $this->options["countOfAnounce"] = $_POST['cp_cat-anounce-count'];
  $this->options["news"] = $_POST['cp_cat-news'];
  $this->options["countOfNews"] = $_POST['cp_cat-news-count'];
  $this->options["video"] = $_POST['cp_cat-video'];
@@ -51,9 +52,9 @@ var $default_settings = array(
 <p><input placeholder="Количество записей в новостях" style="width:300px;" name="cp_cat-news-count" id="cp_cat-news-count" value="'.$this->options["countOfNews"].'"><label> - количество записей, отображаемых в новостях на главной странице</label></p>
 
 <p><input placeholder="Объявления" style="width:300px;" name="cp_cat-anounce" id="cp_cat-anounce" value="'.$this->options["anounce"].'"><label> - id категории для ссылки заголовка <strong>"Объявления"</strong></label></p>
+<p><input placeholder="Количество записей в объявлениях" style="width:300px;" name="cp_cat-anounce-count" id="cp_cat-anounce-count" value="'.$this->options["countOfAnounce"].'"><label> - количество записей, отображаемых в объявлениях на главной странице</label></p>
+
 <p><input placeholder="Видео" style="width:300px;" name="cp_cat-video" id="cp_cat-video" value="'.$this->options["video"].'"><label> - id категории для ссылки заголовка <strong>"Видео"</strong></label></p>
-
-
 
 <p><input placeholder="Фотогалерея" style="width:300px;" name="cp_cat-gallery" id="cp_cat-gallery" value="'.$this->options["gallery"].'"><label> - id категории (несколько категорий - через запятую) для ссылки заголовка <strong>"Избранные рубрики" </strong> <br> (указать категории, содержащие галереи или фотографии)</label></p>
 

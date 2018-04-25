@@ -1,0 +1,184 @@
+.main-slider {
+  position: relative;
+
+  width: 900px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  text-align: center;
+
+  /**/
+
+  .clearfix();
+  .box-shadow(0, 0, 10px);
+  &__img {
+    .size-600x300();
+    float: left;
+    overflow: hidden;
+  }
+
+  &__info {
+    .size-300x300();
+    float: right;
+    background: @footer-bg-color;
+    color: @light-text-color;
+  }
+
+
+  & > input {
+    display: none;
+  }
+
+  & label {
+    position: relative;
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin: 25px 10px 0 10px;
+
+    cursor: pointer;
+    -webkit-transition: background ease-in-out 0.5s;
+    -moz-transition: background ease-in-out 0.5s;
+    -o-transition: background ease-in-out 0.5s;
+    transition: background ease-in-out 0.5s;
+    vertical-align: top;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -o-border-radius: 50%;
+  }
+
+  #slide1.active ~ &__controls label:nth-of-type(1),
+  #slide2.active ~ &__controls label:nth-of-type(2),
+  #slide3.active ~ &__controls label:nth-of-type(3),
+  #slide4.active ~ &__controls label:nth-of-type(4),
+  #slide5.active ~ &__controls label:nth-of-type(5),
+  & label:hover {
+    background: @dark-blue-grey;
+  }
+
+  & label:after {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+
+    display: block;
+
+    width: 12px;
+    height: 12px;
+
+    content: " ";
+
+    border: 2px solid @dark-blue-grey;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -o-border-radius: 50%;
+  }
+
+  &__content {
+    position: relative;
+
+    overflow: hidden;
+
+    width: inherit;
+    height: inherit;
+
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+
+    -o-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  }
+
+  &__item {
+    position: absolute;
+    z-index: 10;
+
+    width: inherit;
+    height: inherit;
+
+    -webkit-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+    -moz-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+    -o-transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+    transition: transform ease-in-out 0.5s, opacity ease-in-out 0.5s;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+
+    opacity: 0;
+    background-size: cover;
+  }
+
+  &__link1 {
+    position: absolute;
+    z-index: 11;
+    bottom: 0;
+    left: 0;
+
+    width: inherit;
+    height: inherit;
+
+    background-color: transparent;
+  }
+
+  &__link2 {
+    position: absolute;
+    z-index: 11;
+    bottom: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: inherit;
+    height: 30px;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    white-space: nowrap;
+
+    color: #fff;
+    background-color: rgba(50, 100, 128, 0.5);
+
+    &::after {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0; /* Положение элемента */
+    right: 0;
+
+    width: 50px; /* Ширина градиента*/
+    height: 100%; /* Высота родителя */
+
+    content: ''; /* Выводим элемент */
+    /* Градиент */
+
+    background: -moz-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
+    background: -webkit-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
+    background: -o-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
+    background: -ms-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
+    background: linear-gradient(to right, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
+   }
+  }
+
+  #slide1.active ~ &__content > &__item--1,
+  #slide2.active ~ &__content > &__item--2,
+  #slide3.active ~ &__content > &__item--3,
+  #slide4.active ~ &__content > &__item--4,
+  #slide5.active ~ &__content > &__item--5 {
+    z-index: 20;
+
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}  

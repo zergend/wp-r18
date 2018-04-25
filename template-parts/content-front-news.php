@@ -7,12 +7,10 @@
  */
 ?>
 
-
-
 	<?php				
-	if ( have_posts() ) : // если имеются записи в блоге.
+	if ( have_posts() ) :
 	query_posts('cat=' . $themeoptions['news'] . '&posts_per_page=' . $themeoptions['countOfNews']);   // указываем ID рубрики, которую необходимо вывести и количество постов.
-	while (have_posts()) : the_post();  // запускаем цикл обхода материалов блога
+	while (have_posts()) : the_post();
 	?>
 	<article>
 		<div class="front__news--date">
@@ -27,10 +25,8 @@
 			</div>
 		</div>
 		<div class="front__news--foto  size-tmb-225x150">
-			<?php 
-				// if ( has_post_thumbnail() ) { // миниатюра			
+			<?php 					
 				echo kama_thumb_img('w=225 &h=150 &crop=center');
-				// }
 			?>
 		</div>
 		<div class="front__news--title">
@@ -53,5 +49,5 @@
 
 	<div class="front__news--all">
 		<a href="<?php echo get_category_link($themeoptions['news']); ?>">Все
-		<?php echo get_cat_name($themeoptions['news']) ?> &raquo;</a>
+		<?php echo get_cat_name($themeoptions['news']) ?> &rarr;</a>
 	</div>
