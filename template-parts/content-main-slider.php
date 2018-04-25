@@ -11,7 +11,7 @@
   $i = 1;
 	query_posts('cat=' . $themeoptions['news'] . '&posts_per_page=5');   // указываем ID рубрики, которую необходимо вывести и количество постов.
 	while (have_posts()) : the_post();
-?>
+    ?>
     <div class="main-slider__item  main-slider__item--<?php echo $i ?>" style="background-image: url(<?php echo kama_thumb_src('w=700 &h=350'); ?>); ">
       <div class="main-slider__img">
         <a href="<?php the_permalink() ?>" class="main-slider__link1">
