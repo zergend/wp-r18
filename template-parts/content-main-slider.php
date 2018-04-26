@@ -12,20 +12,25 @@
 	query_posts('cat=' . $themeoptions['news'] . '&posts_per_page=5');   // указываем ID рубрики, которую необходимо вывести и количество постов.
 	while (have_posts()) : the_post();
     ?>
-    <div class="main-slider__item  main-slider__item--<?php echo $i ?>" style="background-image: url(<?php echo kama_thumb_src('w=700 &h=350'); ?>); ">
-      <div class="main-slider__img">
+    <div class="main-slider__item  main-slider__item--<?php echo $i ?>">
+      <div class="main-slider__img" style="background-image: url(<?php echo kama_thumb_src('w=600 &h=300'); ?>); ">
         <a href="<?php the_permalink() ?>" class="main-slider__link1">
           
         </a>
       </div>
 
-      <div class="main-slider__info">
-        <div class="main-slider__info--title">
-          <h3>
-            <a href="<?php the_permalink() ?>" class="main-slider__link2">
-              <?php the_title(); ?>
-            </a>
-          </h3>
+      <div class="main-slider__info">        
+        <h3>
+          <a href="<?php the_permalink() ?>" class="main-slider__link2">
+            <?php the_title(); ?>
+          </a>
+        </h3>
+        <div class="main-slider__controls">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
+          <label for="slide5"></label>
         </div>
       </div>
     </div>
@@ -40,12 +45,6 @@
   ?>
   </div>
   <!-- main-slider__content -->  
-  <div class="main-slider__controls">
-    <label for="slide1"></label>
-    <label for="slide2"></label>
-    <label for="slide3"></label>
-    <label for="slide4"></label>
-    <label for="slide5"></label>
-  </div>
+
 </div>
 <!-- main-slider -->

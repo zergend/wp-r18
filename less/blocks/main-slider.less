@@ -20,6 +20,7 @@
 
   &__info {
     .size-300x300();
+    position: relative;
     float: right;
     background: @footer-bg-color;
     color: @light-text-color;
@@ -32,12 +33,12 @@
 
   & label {
     position: relative;
-
+    
     display: inline-block;
-
+    z-index: 999 !important;
     width: 8px;
     height: 8px;
-    margin: 25px 10px 0 10px;
+    margin: 250px 10px 0 10px;
 
     cursor: pointer;
     -webkit-transition: background ease-in-out 0.5s;
@@ -59,14 +60,17 @@
   #slide4.active ~ &__controls label:nth-of-type(4),
   #slide5.active ~ &__controls label:nth-of-type(5),
   & label:hover {
-    background: @dark-blue-grey;
+    background: #fff;
+    /* background: @dark-blue-grey; */    
+    z-index: 999 !important;
   }
 
   & label:after {
     position: absolute;
+    /* bottom: -4px; */
     top: -4px;
     left: -4px;
-
+    z-index: 999 !important;
     display: block;
 
     width: 12px;
@@ -74,7 +78,8 @@
 
     content: " ";
 
-    border: 2px solid @dark-blue-grey;
+    /* border: 2px solid @dark-blue-grey; */
+    border: 2px solid #fff;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -133,39 +138,21 @@
   &__link2 {
     position: absolute;
     z-index: 11;
-    bottom: 0;
+    top: 0;
     left: 0;
 
     overflow: hidden;
 
     width: inherit;
-    height: 30px;
+    max-height: 250px;
     padding-top: 15px;
     padding-right: 20px;
     padding-left: 20px;
 
-    white-space: nowrap;
+    white-space: normal;
 
     color: #fff;
-    background-color: rgba(50, 100, 128, 0.5);
-
-    &::after {
-    position: absolute; /* Абсолютное позиционирование */
-    top: 0; /* Положение элемента */
-    right: 0;
-
-    width: 50px; /* Ширина градиента*/
-    height: 100%; /* Высота родителя */
-
-    content: ''; /* Выводим элемент */
-    /* Градиент */
-
-    background: -moz-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
-    background: -webkit-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
-    background: -o-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
-    background: -ms-linear-gradient(left, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
-    background: linear-gradient(to right, rgba(50, 100, 128, 0), rgba(50, 100, 128, 0.7) 100%);
-   }
+    /* background-color: rgba(50, 100, 128, 0.5); */
   }
 
   #slide1.active ~ &__content > &__item--1,
@@ -182,4 +169,4 @@
 
     opacity: 1;
   }
-}  
+}

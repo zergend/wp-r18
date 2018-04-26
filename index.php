@@ -1,2 +1,2 @@
 <?php // front-page.php ?>
-Привет
+<h6>index.php</h6>

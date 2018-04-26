@@ -7,7 +7,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>  style="background: url(<?php echo get_template_directory_uri(); ?>/img/single-header.jpg) no-repeat;">
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
@@ -15,6 +15,10 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
+		?>
+	</header><!-- .entry-header -->
+	
+		<?php
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php rekord18_posted_on();
@@ -24,7 +28,7 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->
+
 
 	<div class="entry-content  entry-content__single-post">
 		<?php

@@ -30,7 +30,7 @@
     <header>
       <div class="logo">
         <a href="/">
-          <img src="img/logo.png" alt="Лого">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Лого">
         </a>
       </div>
       <div class="title">
