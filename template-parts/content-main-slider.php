@@ -25,13 +25,7 @@
             <?php the_title(); ?>
           </a>
         </h3>
-        <div class="main-slider__controls">
-          <label for="slide1"></label>
-          <label for="slide2"></label>
-          <label for="slide3"></label>
-          <label for="slide4"></label>
-          <label for="slide5"></label>
-        </div>
+
       </div>
     </div>
 
@@ -45,6 +39,12 @@
   ?>
   </div>
   <!-- main-slider__content -->  
-
+  <div class="main-slider__controls  styled-input-container  styled-input--diamond">
+    <label for="slide1" class="styled-input-single"></label>
+    <label for="slide2" class="styled-input-single"></label>
+    <label for="slide3" class="styled-input-single"></label>
+    <label for="slide4" class="styled-input-single"></label>
+    <label for="slide5" class="styled-input-single"></label>
+  </div>
 </div>
 <!-- main-slider -->
