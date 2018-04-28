@@ -64,6 +64,9 @@
       float: right;
       box-sizing: border-box;
       width: 280px;
+      & a:hover {
+        border-bottom: 1px dotted @rekord-blue;
+      }
     }
 
     &--more {
@@ -71,6 +74,9 @@
       bottom: 0;
       left: 0;
       font-style: italic;
+      & a:hover {
+        border-bottom: 1px dotted @rekord-blue;
+      }
     }
 
     &--all {
@@ -79,6 +85,9 @@
       font-style: italic;
       font-size: 21px;
       font-weight: 700;
+      & a:hover {
+        border-bottom: 1px dotted @rekord-blue;
+      }
     }
   }
 
@@ -109,10 +118,16 @@
 
     &--title {
       margin-bottom: 10px;
+      & a:hover {
+        border-bottom: 1px dotted @rekord-red;
+      }      
     }
 
     &--more {            
       font-style: italic;
+      & a:hover {
+        border-bottom: 1px dotted @rekord-red;
+      }        
     }
 
     &--all {
@@ -122,6 +137,9 @@
       font-size: 21px;
       font-weight: 700;
       color: @rekord-red;
+      & a:hover {
+        border-bottom: 1px dotted @rekord-red;
+      }        
     }
   }
 }

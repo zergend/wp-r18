@@ -25,9 +25,11 @@
 			</div>
 		</div>
 		<div class="front__news--foto  size-tmb-225x150">
-			<?php 					
-				echo kama_thumb_img('w=225 &h=150 &crop=center');
-			?>
+			<a href="<?php the_permalink() ?>">
+				<?php 								
+					echo kama_thumb_img('w=225 &h=150 &crop=center');
+				?>
+			</a>
 		</div>
 		<div class="front__news--title">
 			<a href="<?php the_permalink() ?>">
