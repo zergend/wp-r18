@@ -7,7 +7,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background: url(<?php echo get_template_directory_uri(); ?>/img/single-header.png) no-repeat;">
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
