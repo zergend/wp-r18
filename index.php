@@ -1,2 +1,3 @@
-<?php // front-page.php ?>
-<h6>index.php</h6>
+<?php
+  include 'archive.php';
+?>

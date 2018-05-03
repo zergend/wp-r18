@@ -45,7 +45,7 @@
           <a href="#">ftvi</a>
         </div>
         <div class="utilities__search">
-          <a href="#">Поиск</a>
+          <?php get_search_form(); ?>
         </div>
       </section>
 
