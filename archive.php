@@ -11,7 +11,7 @@
     </header><!-- .page-header -->    
   <?php
     while ( have_posts() ) : the_post();
-      get_template_part( 'template-parts/content', 'blog' );
+      get_template_part( 'template-parts/content', 'archive' );
     endwhile; // End of the loop.
     // the_posts_navigation();
     if (function_exists("kama_pagenavi")) :

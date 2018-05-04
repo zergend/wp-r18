@@ -8,29 +8,35 @@
 ?>
 
 	<article>
-		<div class="front__news--date">
-			<div class="front__news--day">
+		<div class="archive__news--date">
+			<div class="archive__news--day">
 				<span class="postdate-tab"><?php the_time('d') ?></span>
 			</div>
-			<div class="front__news--month">
+			<div class="archive__news--month">
 				<span class="postdate-tab"><?php the_time('m') ?></span>
 			</div>
-			<div class="front__news--year">
+			<div class="archive__news--year">
 				<span class="postdate-tab"><?php the_time('y') ?></span>
 			</div>
 		</div>
-		<div class="front__news--foto  size-tmb-225x150">
+		<div class="archive__news--foto  size-tmb-225x150">
 			<a href="<?php the_permalink() ?>">
 				<?php 								
-					echo kama_thumb_img('w=225 &h=150 &crop=center');
+					// echo kama_thumb_img('w=225 &h=150 &crop=center &no_stub');
+					$img = kama_thumb_img('w=225 &h=150 &no_stub');
+					if( ! $img ) {
+						echo '';
+					} else {
+						echo $img;
+					}
 				?>
 			</a>
 		</div>
-		<div class="front__news--title">
+		<div class="archive__news--title">
 			<a href="<?php the_permalink() ?>">
 				<?php the_title(); ?>
 			</a>
-			<div class="front__news--more">
+			<div class="archive__news--more">
 				<a href="<?php the_permalink() ?>">Подробнее &nbsp; &rarr;</a>
 			</div>
 		</div>
