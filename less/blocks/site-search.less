@@ -2,13 +2,13 @@
   text-align: right;
   height: 32px;
   border-bottom: 1px solid @rekord-blue;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 
   &__form {
     position: relative;
-    min-width: 200px;
+    min-width: 280px;
     margin: 0 auto;
-    background: @light-blue-grey;
+    background: @base-bg-color;
 
     & button,
     & input {
@@ -33,15 +33,9 @@
       height: 32px;
 
       cursor: pointer;
-    }
 
-    & button:before {
-      content: "\f002";
-
-      color: @dark-blue-grey;
-
-      font-family: FontAwesome;
-      font-size: 16px;
+      background-color: transparent;
+      background-image: url('img/search32.png');
     }
   }
 }
