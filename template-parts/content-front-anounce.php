@@ -13,10 +13,11 @@
 	while (have_posts()) : the_post();
 	?>
 	<article>
-		<div class="front__anounce--title">
+		<div class="front__anounce--title">		
 			<a href="<?php the_permalink() ?>">
 				<?php the_title(); ?>
 			</a>
+			<span class="front__anounce--date"> (<?php the_time('d.m.y') ?>)</span>
 		</div>
 		<div class="front__anounce--more">
 			<a href="<?php the_permalink() ?>">Далее &nbsp; &rarr;</a>

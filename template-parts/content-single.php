@@ -27,11 +27,8 @@
 		<?php
 		endif; ?>
 
-	</header><!-- .entry-header -->
-	
+	</header><!-- .entry-header -->	
 		
-
-
 	<div class="entry-content  entry-content__single-post">
 		<?php
 			the_content( sprintf(

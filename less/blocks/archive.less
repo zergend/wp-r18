@@ -2,6 +2,32 @@
   .clearfix();  
   position: relative;
 
+  &__page-header {
+    position: relative;
+    min-height: 10px;
+    margin-bottom: 35px;
+    background-color: #fff;
+    background-image: url(img/single-bg-left.png), url(img/single-bg-right.png);
+    background-repeat: no-repeat;
+    background-position: bottom left, top right; 
+    .box-shadow(0, 0, 10px);
+
+    & h1, & h2 {
+      padding: 30px;
+      margin: 0 auto;
+      font-size: 28px;
+      text-align: center;
+      color: @rekord-blue;
+    }
+  }
+
+  & article {
+    .clearfix();
+    margin: 20px;
+    padding-bottom: 20px;
+    border-bottom: dotted 1px @rekord-blue;
+  }
+
   &__content {
     .clearfix();
   }
@@ -25,13 +51,6 @@
       color: @rekord-blue;
     }
 
-    & article {
-      .clearfix();
-      margin-top: 20px;
-      padding-bottom: 20px;      
-      border-bottom: dotted 1px @rekord-blue;
-    }
-
     &--date {   
       box-sizing: border-box;       
       float: left;
@@ -53,27 +72,25 @@
     &--foto {
       float: left;
       box-sizing: border-box;
-      /* border: solid 1px @rekord-blue; */
+      margin-right: 20px;
       width: 225px;
     }
 
     &--title {
       position: relative;
-      min-height: 150px;
       font-size: 16px;
-      float: right;
       box-sizing: border-box;
-      width: 580px;
+      padding-left: 20px;
+
       & a:hover {
         border-bottom: 1px solid @rekord-blue;
       }
     }
 
     &--more {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+      margin-top: 20px;
       font-style: italic;
+      padding-left: 20px;
       & a:hover {
         border-bottom: 1px solid @rekord-blue;
       }

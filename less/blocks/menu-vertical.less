@@ -1,3 +1,163 @@
 .menu-vertical {
-  
+  position: relative;
+
+  margin-top: 20px;
+  border-top: 1px solid @light-text-color;
+
+  &__toggle {
+    position: absolute;
+    z-index: 45;
+    top: 0;
+    right: 0;
+
+    display: none;
+
+    width: 40px;
+    height: 30px;
+
+    cursor: pointer;
+
+    border: none;
+    background-color: @dark-blue-grey;
+
+    font-size: 0;
+
+    &:hover {
+      background-color: @blue-grey;
+    }
+  }
+
+  &--closed &__toggle::before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    width: 20px;
+    height: 1px;
+
+    content: "";
+
+    background-color: #fff;
+    box-shadow: 0 4px 0 0 #fff,
+                0 8px 0 0 #fff;
+  }
+
+  &--closed &__toggle:active::before {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 0 0 rgba(255, 255, 255, 0.3),
+                0 8px 0 0 rgba(255, 255, 255, 0.3);
+  }
+
+  &--opened &__toggle {
+    &::before,
+    &::after {
+      position: absolute;
+      top: 14px;
+      left: 5px;
+
+      width: 30px;
+      height: 1px;
+
+      content: "";
+
+      background-color: #fff;
+    }
+    &::before {
+      transform: rotate(45deg);
+
+      box-shadow: none;
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+    &:active::before,
+    &:active::after {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  @media @mobile-widths-only {
+    &--closed &__item {
+      display: none;
+    }
+
+    &__toggle {
+      display: block;
+    }
+  }
+
+  &--nojs &__toggle {
+    display: none;
+  }
+
+  &--nojs &__item {
+    display: block;
+  }
+
+  &__item {
+    position: relative;
+
+    &.menu-item-has-children>a {
+      background-image: url("img/r_arr.png");
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+
+    &:hover > ul.sub-menu {
+      display: block;
+    }
+
+    & a {
+      display: block;
+
+      padding: 5px 10px;
+
+      color: @light-text-color;
+      border-bottom: 1px solid @light-text-color;
+      background-color: @rekord-blue;
+
+      font-size: 16px;
+
+      &:hover {
+        cursor: pointer;
+
+        /* color: @rekord-red; */
+
+        background-color: @rekord-red;
+      }
+    }
+
+    &.current-menu-item a {
+      background-color: @blue-grey;
+    }
+  }
+
+  &__list {
+    text-align: left;
+
+    .clear-list-style();
+
+    &.sub-menu {
+      position:absolute;
+    	z-index: 50;
+    	top: -15px;
+    	left: 199px;
+
+    	display: none;
+
+    	width: 200px;
+
+      .box-shadow();
+    }
+
+    &.sub-menu a {
+      color: @dark-blue-grey;
+
+      background-color: @light-blue-grey;
+
+      &:hover {
+        background-color: @blue-grey;
+      }
+    }
+  }
 }

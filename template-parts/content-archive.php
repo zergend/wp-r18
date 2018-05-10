@@ -19,7 +19,7 @@
 				<span class="postdate-tab"><?php the_time('y') ?></span>
 			</div>
 		</div>
-		<div class="archive__news--foto  size-tmb-225x150">
+		<div class="archive__news--foto">
 			<a href="<?php the_permalink() ?>">
 				<?php 								
 					// echo kama_thumb_img('w=225 &h=150 &crop=center &no_stub');
