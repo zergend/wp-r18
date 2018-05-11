@@ -11,7 +11,6 @@
         <h2>Новости</h2>
         <?php
           include 'template-parts/content-front-news.php';
-          // get_template_part ( 'template-parts/content', 'front-news' );
         ?>
       </section>      
 
@@ -23,8 +22,11 @@
       </section>
     </div>
 
-    <section class="front__links">
-      <h2>Ссылки</h2>
+    <section class="front__service">
+      <h2><a href="<?php echo get_category_link($themeoptions['service']); ?>">Наши услуги</a></h2>
+      <?php
+          include 'template-parts/content-front-service.php';
+        ?> 
     </section>
   </main>
 </div>

@@ -33,7 +33,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="page__footer">
+		<div class="page__footer">
 			<?php
 				edit_post_link(
 					sprintf(
@@ -45,7 +45,9 @@
 					'</span>'
 				);
 			?>
-		</footer><!-- .page__footer -->
+		</div><!-- .page__footer -->
 	<?php endif; ?>
-
 </article><!-- #post-## -->
+<div class="single__end">
+		<img width="300" src="<?php echo get_template_directory_uri(); ?>/img/end-of-single.png" alt="">
+</div>

@@ -27,6 +27,8 @@ var $default_settings = array(
  $this->options["countOfAnounce"] = $_POST['cp_cat-anounce-count'];
  $this->options["news"] = $_POST['cp_cat-news'];
  $this->options["countOfNews"] = $_POST['cp_cat-news-count'];
+ $this->options["service"] = $_POST['cp_cat-service'];
+ $this->options["countOfService"] = $_POST['cp_cat-service-count'];
  $this->options["video"] = $_POST['cp_cat-video'];
  $this->options["gallery"] = $_POST['cp_cat-gallery'];
  $this->options["facebook"] = $_POST['cp_facebook'];
@@ -53,6 +55,9 @@ var $default_settings = array(
 
 <p><input placeholder="Объявления" style="width:300px;" name="cp_cat-anounce" id="cp_cat-anounce" value="'.$this->options["anounce"].'"><label> - id категории для ссылки заголовка <strong>"Объявления"</strong></label></p>
 <p><input placeholder="Количество записей в объявлениях" style="width:300px;" name="cp_cat-anounce-count" id="cp_cat-anounce-count" value="'.$this->options["countOfAnounce"].'"><label> - количество записей, отображаемых в объявлениях на главной странице</label></p>
+
+<p><input placeholder="Услуги" style="width:300px;" name="cp_cat-service" id="cp_cat-service" value="'.$this->options["service"].'"><label> - id категории для ссылки заголовка <strong>"Услуги"</strong></label></p>
+<p><input placeholder="Количество записей в услугах" style="width:300px;" name="cp_cat-service-count" id="cp_cat-service-count" value="'.$this->options["countOfService"].'"><label> - количество записей, отображаемых в Услугах на главной странице</label></p>
 
 <p><input placeholder="Видео" style="width:300px;" name="cp_cat-video" id="cp_cat-video" value="'.$this->options["video"].'"><label> - id категории для ссылки заголовка <strong>"Видео"</strong></label></p>
 
