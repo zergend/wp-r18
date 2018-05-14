@@ -10,8 +10,8 @@ function my_extra_fields() {
 function extra_fields_box_func( $post ){
 ?>
 	<p><b>ФОТКИ ДЛЯ ГАЛЕРЕИ </b></p>
-	<p>Список ссылок на фотографии (БЕЗ ТЕГОВ!) с Яндекс.Фотки + имя альбома:<br>
-		<textarea type="text" name="extra[fotolinks]" style="width:100%;height:250px;"><?php echo get_post_meta($post->ID, 'fotolinks', 1); ?></textarea>
+	<p>Список ссылок на фотографии (БЕЗ ТЕГОВ!) с Яндекс.Фотки / imgsrc.ru + имя альбома:<br>
+		<textarea type="text" name="extra[fotolinks]" style="width:100%;height:150px;"><?php echo get_post_meta($post->ID, 'fotolinks', 1); ?></textarea>
 	</p>
 
 	<input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>" />

@@ -15,9 +15,7 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-		?>
 
-		<?php
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php rekord18_posted_on();					
@@ -43,6 +41,3 @@
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
-<div class="single__end">
-		<img width="300" src="<?php echo get_template_directory_uri(); ?>/img/end-of-single.png" alt="">
-</div>

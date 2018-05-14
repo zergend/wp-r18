@@ -150,22 +150,66 @@
   }
 
   &__service {
-    border-bottom: 2px solid @rekord-blue;
+    .clearfix();
 
     & h2 {
-      text-transform: lowercase;
+      .box-shadow();
+      /* border-top: 2px solid @rekord-blue;
+      border-bottom: 2px solid @rekord-blue; */
+      background-color: @rekord-red;
+      text-transform: uppercase;
       font-weight: 700;
-      color: @rekord-red;
+      /* color: @rekord-red; */
+      padding-top: 15px;
+      padding-bottom: 15px;   
+      margin: 0;
+      & a {
+        color: @light-text-color;            
+      }
     }
 
     & article {
       box-sizing: border-box;
-      width: 300px;
+      width: 280px;
       float: left;
       text-align: center;
-      padding: 20px;
-      padding-right: 0;
+      margin-left: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
       font-size: 16px;
+      .box-shadow();
+      border-bottom: 2px solid @rekord-red;
+    }
+
+    &--title {
+      padding-top: 15px;
+      padding-bottom: 15px;      
+      background-color: @rekord-red;
+      & a {
+        color: @light-text-color;        
+      }
+      & a:hover {
+        border-bottom: 1px solid @light-text-color;
+      }
+    }
+
+    &--foto {
+      padding: 0;
+      margin: 0;
+      line-height: 0;      
+    }
+  }
+
+  &__map {
+    margin-top:20px;
+    
+    & h2 {
+      .box-shadow();
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin: 0;
+      color: @light-text-color;
+      background-color: @rekord-red;
     }
   }
 }

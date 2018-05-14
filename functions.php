@@ -173,7 +173,7 @@ add_filter('get_the_archive_title', function( $title ){
 // функции темы
 include('functions/settings.php');
 // произвольные поля
-// include('functions/my_extra_fields.php');
+include('functions/my_extra_fields.php');
 // menu walkers
 include('functions/walker-menu.php');
 // Пагинация

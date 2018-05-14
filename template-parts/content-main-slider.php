@@ -13,7 +13,7 @@
 	while (have_posts()) : the_post();
     ?>
     <div class="main-slider__item  main-slider__item--<?php echo $i ?>">
-      <div class="main-slider__img" style="background-image: url(<?php echo kama_thumb_src('w=600 &h=300'); ?>); ">
+      <div class="main-slider__img" style="background-image: url(<?php echo kama_thumb_src('w=600 &h=300 &allow=any'); ?>); ">
         <a href="<?php the_permalink() ?>" class="main-slider__link1">
           
         </a>

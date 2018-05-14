@@ -28,6 +28,12 @@
           include 'template-parts/content-front-service.php';
         ?> 
     </section>
+    <section class="front__map">
+      <h2>Как нас найти</h2>
+        <?php
+          include 'template-parts/content-map.php';
+        ?> 
+    </section>
   </main>
 </div>
 </div>
