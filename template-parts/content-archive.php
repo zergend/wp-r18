@@ -21,14 +21,10 @@
 		</div>
 		<div class="archive__news--foto">
 			<a href="<?php the_permalink() ?>">
-				<?php 								
-					// echo kama_thumb_img('w=225 &h=150 &crop=center &no_stub');
-					$img = kama_thumb_img('w=225 &h=150 &no_stub');
-					if( ! $img ) {
-						echo '';
-					} else {
-						echo $img;
-					}
+				<?php // миниатюра
+					if (function_exists("get_tmb")) {
+						get_tmb( $post->ID, 225, 150, 'img' );
+					}	
 				?>
 			</a>
 		</div>

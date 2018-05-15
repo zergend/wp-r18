@@ -33,21 +33,6 @@
 // список ссылок (+ заголовок) на фотографии в дополнительном поле поста
 $fotolinks = get_post_meta($post->ID, 'fotolinks', true); 
 
-// получим альтернативный текст для <img> 
-/* $start_alt = "Фотографии в альбоме «";
-$end_alt = "» на Яндекс.Фотках";
-$alt = ""; // альтернативный текст в <img>
-
-function get_string_between($string, $start, $end){
-	$string = ' ' . $string;
-	$ini = strpos($string, $start);
-	if ($ini == 0) return '';
-		$ini += strlen($start);
-		$len = strpos($string, $end, $ini) - $ini;
-			return substr($string, $ini, $len);
-		}		
-$alt = get_string_between($fotolinks, $start_alt, $end_alt);	*/
-
 // выберем изображения
 $content = get_the_content(); // содержимое поста
 $pattern = '/https?.+?\.(jpg|png|JPG)/';
@@ -72,13 +57,11 @@ if ( $i > 0 ) {
 
 	<div class="entry-content">
 		<?php
-			//$patterns = array();
-			//$patterns[0] = '/<p><img.*\/p>/';
 			$pattern = '/<img.+\/>/';
 			$content = get_the_content();
 			$content = apply_filters('the_content', $content);
 			$content = strip_tags($content, '<p><a><ol><ul><li><strong><b><table><th><tr><td>');
-			echo preg_replace($pattern, '', $content);
+			echo preg_replace($pattern, '', $content);			
 		?>
 	</div><!-- .entry-content -->
 

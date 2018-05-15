@@ -26,8 +26,10 @@
 		</div>
 		<div class="front__news--foto  size-tmb-225x150">
 			<a href="<?php the_permalink() ?>">
-				<?php 								
-					echo kama_thumb_img('w=225 &h=150 &crop=center');
+				<?php // миниатюра
+					if (function_exists("get_tmb")) {
+						get_tmb( $post->ID, 225, 150, 'img' );
+					}					
 				?>
 			</a>
 		</div>

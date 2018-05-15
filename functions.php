@@ -178,5 +178,6 @@ include('functions/my_extra_fields.php');
 include('functions/walker-menu.php');
 // Пагинация
 include('functions/pagenavi.php');
-
+// Миниатюры из дополнительного поля (со сторонних ресурсов)
+include('functions/get_tmb.php');
 ?>
