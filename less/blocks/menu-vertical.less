@@ -4,6 +4,17 @@
   margin-top: 20px;
   border-top: 1px solid @light-text-color;
 
+  &--info {
+    margin-top: 50px;
+  }
+
+  & h3 {
+    margin: 0;
+    padding: 10px 5px;
+    color: @light-text-color;
+    border-bottom: 1px solid @light-text-color;
+  }
+
   &__toggle {
     position: absolute;
     z-index: 45;
@@ -106,7 +117,7 @@
     &:hover > ul.sub-menu {
       display: block;
     }
-
+  
     & a {
       display: block;
 
@@ -132,6 +143,17 @@
     }
   }
 
+  &--info &__item {
+
+    & a {
+      background-color: @rekord-red;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   &__list {
     text-align: left;
 
@@ -148,16 +170,6 @@
     	width: 250px;
 
       .box-shadow();
-    }
-
-    &.sub-menu a {
-      /* color: @dark-blue-grey;
-
-      background-color: @light-blue-grey; */
-
-      &:hover {
-        /* background-color: @blue-grey; */
-      }
     }
   }
 }

@@ -1,4 +1,7 @@
 .wp-pagenavi {
+  .center();
+  margin-bottom: 25px;
+  text-align: center;
 
   &__link,
   &--current,
@@ -6,6 +9,13 @@
     padding-right: 5px;
 
     border-right: 1px solid @rekord-blue;
+  }
+
+  &--current {
+    padding: 2px 5px;
+    border: 1px solid @rekord-blue;
+    margin-left: -4px;
+    border-radius: 2px;
   }
 
   &--next,

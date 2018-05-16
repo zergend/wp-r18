@@ -7,7 +7,21 @@
  * @package rekord18
  */
 
- // обязательный для темы плагин kama thumbnail
+// стили / скрипты
+add_action( 'wp_enqueue_scripts', 'enqueue_rekord18_style' );
+function enqueue_rekord18_style() {
+	wp_enqueue_style( 'rekord18-style', get_template_directory_uri() . '/rekord18.css' );	
+	wp_enqueue_style( 'google-roboto-condensed', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700&amp;subset=cyrillic' );	
+
+	if( is_singular($post_types) ) {
+		wp_enqueue_script('jquery-1-12-4', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=4.7');
+		// fotorama.css & fotorama.js
+		wp_enqueue_style('fotorama-style', '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css');
+		wp_enqueue_script('fotorama-script', 'http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js');
+  }
+}
+
+// обязательный для темы плагин kama thumbnail
 if( ! is_admin() && ! function_exists('kama_thumb_img') ){
 	wp_die('Активируйте обязательный для темы плагин Kama Thumbnail');
 }
@@ -36,8 +50,9 @@ function rekord18_setup() {
 	add_theme_support( 'post-thumbnails' );
 	// This theme uses wp_nav_menu() in ... location.
 	register_nav_menus( array(
-		'header-menu' => 'Меню в шапке',
-		'sidebar-menu' => 'Меню в боковой колонке'
+		/* 'header-menu' => 'Меню в шапке', */
+		'sidebar-menu' => 'Меню в боковой колонке (основное)',
+		'sidebar-menu-info' => 'Меню cо справочной информацией в боковой колонке'
 	) );
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'rekord18_custom_background_args', array(
@@ -67,7 +82,7 @@ function rekord18_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	register_sidebar( array(
+	/* register_sidebar( array(
 		'name'          => esc_html__( 'Правая панель виджетов', 'rekord18' ),
 		'id'            => 'sidebar-right',
 		'description'   => esc_html__( 'Добавьте виджеты.', 'rekord18' ),
@@ -84,7 +99,7 @@ function rekord18_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	) ); */
 }
 add_action( 'widgets_init', 'rekord18_widgets_init' );
 
