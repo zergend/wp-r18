@@ -11,8 +11,13 @@
 add_action( 'wp_enqueue_scripts', 'enqueue_rekord18_style' );
 function enqueue_rekord18_style() {
 	wp_enqueue_style( 'rekord18-style', get_template_directory_uri() . '/rekord18.css' );	
+<<<<<<< HEAD
 	wp_enqueue_style( 'google-roboto-condensed', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700&amp;subset=cyrillic' );	
 	wp_enqueue_style( 'google-roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;subset=cyrillic' );	
+=======
+	wp_enqueue_style( 'google-roboto-condensed', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700&amp;subset=cyrillic' );
+	wp_enqueue_style( 'google-roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;subset=cyrillic' );
+>>>>>>> 6e86134879acb497553606ef78a8945fa211bbad
 
 	if( is_singular($post_types) ) {
 		wp_enqueue_script('jquery-1-12-4', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?ver=4.7');
