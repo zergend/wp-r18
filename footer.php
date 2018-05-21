@@ -3,6 +3,11 @@
         <div class="footer--column-1">
         <p>&copy; <?php echo date('Y') ?> ГАУ ДО «ДЮСШ «Рекорд»</p>
         <p>При полном или частичном использовании материалов ссылка на официальный сайт <a href="/">ГАУ ДО «ДЮСШ «Рекорд»</a> обязательна.</p>  
+        <!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=48947690&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/48947690/3_0_E31D24FF_E31D24FF_1_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="48947690" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
         </div>
         <div class="footer--column-2">
 
