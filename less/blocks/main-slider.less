@@ -1,38 +1,83 @@
 .main-slider {
+  display: none;
   position: relative;
 
-  width: 900px;
-  height: 300px;
   margin: 0 auto;
 
   text-align: center;
 
   .clearfix();
   .box-shadow(0, 0, 10px);
-  &__img {
-    .size-600x300();
-    float: left;
-    overflow: hidden;
-  }
 
-  &__info {
-    .size-300x300();
-    position: relative;
-    float: right;
-    background: @footer-bg-color;
-    color: @light-text-color;
-
-    & hr {
-      /* margin: 0 auto; */
-      margin-top: 20px;
-      max-width: 100px;
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px solid #ccc;
-      padding: 0;
+  @media @tablet-widths {
+    display: block; 
+    width: 100%; 
+    max-width: 600px;
+    height: 200px;
+    &__img {
+      .size-400x200();
+      width: 66.667%;
+      max-width: 400px;      
+      float: left;
+      overflow: hidden;
+    }
+  
+    &__info {
+      .size-200x200();
+      width: 33.333%;
+      max-width: 200px;
+      position: relative;
+      float: right;
+      background: @footer-bg-color;
+      color: @light-text-color;  
+  
+      & hr {
+        margin-top: 20px;
+        max-width: 100px;
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        padding: 0;
+      }
     }
   }
+  
+  @media @desktop-widths {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: 300px;    
+
+    &__img {
+      .size-600x300();
+      width: 66.667%;
+      max-width: 600px;
+      float: left;
+      overflow: hidden;
+    }
+  
+    &__info {
+      .size-300x300();
+      width: 33.333%;
+      max-width: 300px;
+      position: relative;
+      float: right;
+      background: @footer-bg-color;
+      color: @light-text-color;  
+  
+      & hr {
+        margin-top: 20px;
+        max-width: 100px;
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        padding: 0;
+      }
+    }    
+  }
+
 
   & > input {
     display: none;
@@ -105,11 +150,6 @@
 
     width: inherit;
     height: inherit;
-
-    /* -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-    -o-box-shadow: 0 0 20px rgba(0, 0, 0, .5); */
   }
 
   &__item {
@@ -146,11 +186,8 @@
   }
 
   &__link2 {
-    /* position: absolute; */
     display: block;
     z-index: 11;
-    /* top: 0;
-    left: 0; */
 
     overflow: hidden;
 
