@@ -1,6 +1,7 @@
 .main-slider {
   display: none;
   position: relative;
+  /* box-sizing: border-box; */
 
   margin: 0 auto;
 
@@ -10,14 +11,15 @@
   .box-shadow(0, 0, 10px);
 
   @media @tablet-widths {
-    display: block; 
+    display: inline-block; 
     width: 100%; 
-    max-width: 600px;
+    max-width: 900px;
     height: 200px;
+
     &__img {
       .size-400x200();
       width: 66.667%;
-      max-width: 400px;      
+      max-width: 600px;      
       float: left;
       overflow: hidden;
     }
@@ -25,7 +27,8 @@
     &__info {
       .size-200x200();
       width: 33.333%;
-      max-width: 200px;
+      max-width: 300px;
+      font-weight: 400;
       position: relative;
       float: right;
       background: @footer-bg-color;
@@ -61,6 +64,7 @@
       .size-300x300();
       width: 33.333%;
       max-width: 300px;
+      font-weight: 700;
       position: relative;
       float: right;
       background: @footer-bg-color;
@@ -85,9 +89,18 @@
 
   &__controls {
     position: absolute;
+    display: none;
     right: 48.5px;
     bottom: 20px;
     z-index: 999 !important;
+
+    @media @tablet-widths {
+
+    }
+    
+    @media @desktop-widths {
+      display: inline-block;
+    }   
   }
 
   & label {

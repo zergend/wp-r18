@@ -14,10 +14,18 @@
   &__news {
     .clearfix();
     box-sizing: border-box;
-    width: 600px;
+    width: 300px;
     float: left;
     padding: 20px;
-    padding-right: 0;    
+    padding-right: 0;  
+    
+    @media @tablet-widths {
+      width: 300px;
+    }
+    
+    @media @desktop-widths {
+      width: 600px;
+    }    
 
     & h2 {
       font-size: 24px;
@@ -98,10 +106,18 @@
   &__anounce {
     box-sizing: border-box;
     width: 300px;
-    float: right;
+    float: left;
     padding: 20px;
     padding-right: 10px;
     font-size: 16px;
+
+    @media @tablet-widths {
+      float: left;
+    }
+    
+    @media @desktop-widths {
+      float: right;
+    }
 
     & article {
       margin-top: 20px;

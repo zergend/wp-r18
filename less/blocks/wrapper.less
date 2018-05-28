@@ -2,12 +2,13 @@
   .center();
   .clearfix();
 
-  width: 300px;
+  width: 98%;
+  max-width: 748px;
+  min-width: 320px;
   background-image: none;
   background-color: @base-bg-color;
 
   @media @tablet-widths {
-    /* width: 748px; */
     width: 98%;
     max-width: 1180px;
   }
@@ -17,7 +18,6 @@
     max-width: 1180px;  
     background: @base-bg-color url("/img/bg-wrapper.jpg") 100% 0 no-repeat;
   }
-
   
   .box-shadow();
 }

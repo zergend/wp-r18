@@ -4,19 +4,20 @@ main {
   width: 300px;
 
   @media @tablet-widths {
+    box-sizing: border-box;
     width: 100%;
-    max-width: 600px;
+    max-width: 1180px;
     float: left;
     /* http://htmlbook.ru/blog/4-metoda-sozdaniya-kolonok-odinakovoy-vysoty */
     border-left: 280px solid @rekord-blue;
   }
   
   @media @desktop-widths {
-    width: 100%;
+    /* width: 100%;
     max-width: 900px;
-    float: left;
+    float: left; */
     /* http://htmlbook.ru/blog/4-metoda-sozdaniya-kolonok-odinakovoy-vysoty */
-    border-left: 280px solid @rekord-blue;
+    /* border-left: 280px solid @rekord-blue; */
   }
 
 }
