@@ -23,7 +23,18 @@ footer {
   & .footer--inside {
     .center();
     .clearfix();
-    width: 1180px;    
+    width: 98%;    
+
+    @media @tablet-widths {
+      width: 98%;
+      max-width: 1180px;
+    }
+    
+    @media @desktop-widths {
+      width: 98%;
+      max-width: 1180px;
+    }
+    
   }
 
   & .footer--column-1 {

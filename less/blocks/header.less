@@ -13,8 +13,17 @@ header {
   }
 
   & .title {
+    display: none;
     float: left;
     padding-top: 26px;
+
+    @media @tablet-widths {
+      display: none;
+    }
+    
+    @media @desktop-widths {
+      display: block;
+    }
 
     & h1 {
       padding: 0;
@@ -32,23 +41,54 @@ header {
     position: relative;
     box-sizing: border-box;
     min-height: 150px;
-    float: right;
-    text-align: right;
+    float: left;
+    text-align: left;
+    padding: 0 20px;
+    .center();
+
+    @media @tablet-widths {
+      float: right;
+      text-align: right;      
+    }
+    
+    @media @desktop-widths {
+      
+    }    
 
     &__ftvi {
-      position: absolute;
-      top: 5px;
-      right: 20px;
+      position: relative;
+      display: block;
+      float: left;
+
+      @media @tablet-widths {
+        position: absolute;        
+        top: 5px;
+        right: 20px;  
+      }
       
+      @media @desktop-widths {
+        
+      }
+
       & img {
         max-width: 48px;
       }
     }
 
     &__search {
-      position: absolute;
-      bottom: 5px;
-      right: 20px;
+      position: relative;
+      display: block;
+      float: left;
+
+      @media @tablet-widths {
+        position: absolute;        
+        bottom: 5px;
+        right: 20px;
+      }
+      
+      @media @desktop-widths {
+        
+      }
     }
   }
 }

@@ -56,13 +56,13 @@
         </a>
       </div>
       <section class="utilities">
-        <div class="utilities__search">
-          <?php get_search_form(); ?>
-        </div>
         <div class="utilities__ftvi">
           <a itemprop="Copy" href="#" class="bt_widget-vi-on" title="Версия для слабовидящих">
             <img src="<?php echo get_template_directory_uri(); ?>/img/ftvi48.png" width="64" height="64" alt="для слабовидящих">
           </a>
+        </div>        
+        <div class="utilities__search">
+          <?php get_search_form(); ?>
         </div>
       </section>
 

@@ -27,12 +27,16 @@
     &__info {
       .size-200x200();
       width: 33.333%;
-      max-width: 300px;
-      font-weight: 400;
+      max-width: 300px;      
       position: relative;
       float: right;
       background: @footer-bg-color;
       color: @light-text-color;  
+
+      & h1, & h2, & h3, & h4, & h5, & h6 {
+        font-weight: 400;
+        font-size: 13px;
+      }
   
       & hr {
         margin-top: 20px;
@@ -64,12 +68,16 @@
       .size-300x300();
       width: 33.333%;
       max-width: 300px;
-      font-weight: 700;
       position: relative;
       float: right;
       background: @footer-bg-color;
       color: @light-text-color;  
-  
+      
+      & h1, & h2, & h3, & h4, & h5, & h6 {
+        font-weight: 700;
+        font-size: 16px;
+      }
+
       & hr {
         margin-top: 20px;
         max-width: 100px;

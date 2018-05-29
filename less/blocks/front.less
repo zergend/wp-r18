@@ -14,17 +14,21 @@
   &__news {
     .clearfix();
     box-sizing: border-box;
-    width: 300px;
+    /* width: 300px; */
+    width: 100%;
+    max-width: 468px;
     float: left;
     padding: 20px;
     padding-right: 0;  
     
     @media @tablet-widths {
-      width: 300px;
+      width: 100%;
+      max-width: 600px;
     }
     
     @media @desktop-widths {
-      width: 600px;
+      width: 66.667%;
+      max-width: 600px;
     }    
 
     & h2 {
@@ -71,21 +75,46 @@
 
     &--title {
       position: relative;
-      min-height: 150px;
+      padding: 10px 20px;
+      padding-left: 0;
+      width: 100%;
+      min-width: 250px;
       font-size: 16px;
-      float: right;
+      float: left;
       box-sizing: border-box;
-      width: 280px;
+
+      @media @tablet-widths {
+      /*  width: 100%;
+        max-width: 600px;
+        float: left; */
+      }
+      
+      @media @desktop-widths {
+        float: right;
+        min-height: 150px;
+      }
+
       & a:hover {
         border-bottom: 1px solid @rekord-blue;
       }
     }
 
-    &--more {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      font-style: italic;
+    &--more {      
+      display: none;
+
+      @media @tablet-widths {
+        /*  width: 100%;
+          max-width: 600px;
+          float: left; */
+        }
+        
+      @media @desktop-widths {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-style: italic;
+      }      
       & a:hover {
         border-bottom: 1px solid @rekord-blue;
       }
@@ -105,17 +134,22 @@
 
   &__anounce {
     box-sizing: border-box;
-    width: 300px;
+    width: 100%;
+    max-width: 468px;
     float: left;
     padding: 20px;
     padding-right: 10px;
     font-size: 16px;
 
     @media @tablet-widths {
+      width: 100%;
+      max-width: 600px;
       float: left;
     }
     
     @media @desktop-widths {
+      width: 33.333%;
+      max-width: 300px;
       float: right;
     }
 
