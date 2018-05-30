@@ -14,18 +14,11 @@
   &__news {
     .clearfix();
     box-sizing: border-box;
-    /* width: 300px; */
     width: 100%;
-    max-width: 468px;
+    max-width: 900px;
     float: left;
     padding: 20px;
-    padding-right: 0;  
-    
-    @media @tablet-widths {
-      width: 100%;
-      max-width: 600px;
-    }
-    
+     
     @media @desktop-widths {
       width: 66.667%;
       max-width: 600px;
@@ -65,7 +58,6 @@
     &--foto {
       float: left;
       box-sizing: border-box;
-      /* border: solid 1px @rekord-blue; */
       width: 225px;
     }
 
@@ -75,22 +67,16 @@
 
     &--title {
       position: relative;
-      padding: 10px 20px;
-      padding-left: 0;
-      width: 100%;
-      min-width: 250px;
       font-size: 16px;
-      float: left;
+      margin-left: 290px;
       box-sizing: border-box;
-
-      @media @tablet-widths {
-      /*  width: 100%;
-        max-width: 600px;
-        float: left; */
-      }
-      
+     
       @media @desktop-widths {
+        padding: 0;
+        padding-left: 20px;
+        width: 280px;
         float: right;
+        margin-left: 0;
         min-height: 150px;
       }
 
@@ -101,18 +87,12 @@
 
     &--more {      
       display: none;
-
-      @media @tablet-widths {
-        /*  width: 100%;
-          max-width: 600px;
-          float: left; */
-        }
         
       @media @desktop-widths {
         display: block;
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 20px;
         font-style: italic;
       }      
       & a:hover {
@@ -208,12 +188,10 @@
 
     & h2 {
       .box-shadow();
-      /* border-top: 2px solid @rekord-blue;
-      border-bottom: 2px solid @rekord-blue; */
+
       background-color: @rekord-red;
       text-transform: uppercase;
       font-weight: 700;
-      /* color: @rekord-red; */
       padding-top: 15px;
       padding-bottom: 15px;   
       margin: 0;

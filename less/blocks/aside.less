@@ -1,11 +1,17 @@
 aside {
-  .clearfix();
-  width: 280px;
+  .clearfix();  
   margin-right: -280px; /* http://htmlbook.ru/blog/4-metoda-sozdaniya-kolonok-odinakovoy-vysoty */
   position: relative;
   top: 0;
   height: 100%;
-  float: left;
+  
+  float: none;
+  width: 100%;
   background-color: @aside-bg-color;
   .box-shadow(0, 0, 10px);
+
+  @media @tablet-widths {
+    float: left;
+    width: 280px;
+  }
 }

@@ -1,7 +1,8 @@
 main {
   .clearfix();
   float: none;
-  width: 300px;
+  width: 100%;
+  max-width: 900px;
 
   @media @tablet-widths {
     box-sizing: border-box;
@@ -11,13 +12,4 @@ main {
     /* http://htmlbook.ru/blog/4-metoda-sozdaniya-kolonok-odinakovoy-vysoty */
     border-left: 280px solid @rekord-blue;
   }
-  
-  @media @desktop-widths {
-    /* width: 100%;
-    max-width: 900px;
-    float: left; */
-    /* http://htmlbook.ru/blog/4-metoda-sozdaniya-kolonok-odinakovoy-vysoty */
-    /* border-left: 280px solid @rekord-blue; */
-  }
-
 }

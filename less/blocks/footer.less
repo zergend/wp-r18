@@ -39,24 +39,41 @@ footer {
 
   & .footer--column-1 {
     box-sizing: border-box;    
-    width: 280px;
     padding: 20px;
-    padding-left: 0;
-    float: left;
+    width: 100%;
+    text-align: center;
+    float: none;
+
+    @media @tablet-widths {
+      width: 25%;
+      float: left;
+      text-align: left;
+      max-width: 280px;      
+      padding-left: 0;  
+    }
   }
 
   & .footer--column-2,
   & .footer--column-3,
   & .footer--column-4 {
     box-sizing: border-box;    
-    width: 300px;
+    width: 100%;
     padding: 20px;
-    padding-right: 0;
-    float: left;
+    text-align: center;
+    float: none;
+
+    @media @tablet-widths {
+      width: 25%;
+      float: left;
+      padding-right: 0;
+      max-width: 300px;        
+    }
   }  
 
   & .footer--column-4 {
-    text-align: right;
+    @media @tablet-widths {
+      text-align: right;    
+    }    
   }
 
   & .links a {
@@ -67,6 +84,13 @@ footer {
   & .links i {
     margin-left: 20px;
     display: inline-block;
+
+    @media @tablet-widths {
+      margin-left: 5px;
+    } 
+    @media @desktop-widths {
+      margin-left: 20px;
+    } 
   }
 
   & .sprite {
