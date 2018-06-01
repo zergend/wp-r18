@@ -28,6 +28,7 @@
 				?>
 			</a>
 		</div>
+		<div class="archive__news--clearfix"></div>
 		<div class="archive__news--title">
 			<a href="<?php the_permalink() ?>">
 				<?php the_title(); ?>

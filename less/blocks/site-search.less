@@ -5,10 +5,13 @@
   margin-bottom: 0;
 
   &__form {
-    position: relative;
-    min-width: 280px;
+    position: relative;    
     margin: 0 auto;
     background: @base-bg-color;
+
+    @media @mobile-widths {
+      min-width: 280px;
+    }    
 
     & button,
     & input {

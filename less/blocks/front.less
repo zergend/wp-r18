@@ -56,9 +56,21 @@
     }
 
     &--foto {
-      float: left;
+      float: right;
       box-sizing: border-box;
       width: 225px;
+      
+      @media @mobile-widths {
+        float: left;
+      }  
+    }
+
+    &--clearfix {
+      .clearfix();
+      margin-bottom: 20px;
+      @media @mobile-widths {
+        display: none;
+      }   
     }
 
     &--fotolinks {
@@ -68,9 +80,14 @@
     &--title {
       position: relative;
       font-size: 16px;
-      margin-left: 290px;
       box-sizing: border-box;
-     
+      text-indent: 20px;
+
+      @media @mobile-widths {
+        margin-left: 290px;
+        text-indent: 0;
+      }      
+
       @media @desktop-widths {
         padding: 0;
         padding-left: 20px;

@@ -70,17 +70,48 @@
     }
 
     &--foto {
-      float: left;
+      float: right;
       box-sizing: border-box;
-      margin-right: 20px;
       width: 225px;
+      
+      @media @mobile-widths {
+        float: left;
+        margin-right: 20px;
+      }        
     }
+
+    &--clearfix {
+      .clearfix();
+      margin-bottom: 20px;
+      @media @mobile-widths {
+        display: none;
+      }   
+    }    
 
     &--title {
       position: relative;
       font-size: 16px;
       box-sizing: border-box;
-      padding-left: 20px;
+      /* padding-left: 20px; */
+
+     /* position: relative;
+      font-size: 16px;
+      box-sizing: border-box;
+      text-indent: 20px;*/
+
+      @media @mobile-widths {
+        margin-left: 290px;
+        text-indent: 0;
+      }      
+
+      @media @desktop-widths {
+        padding: 0;
+        padding-left: 20px;
+        width: 280px;
+        float: right;
+        margin-left: 0;
+        min-height: 150px;
+      } 
 
       & a:hover {
         border-bottom: 1px solid @rekord-blue;

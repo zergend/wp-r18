@@ -33,6 +33,7 @@
 				?>
 			</a>
 		</div>
+		<div class="front__news--clearfix"></div>
 		<div class="front__news--title">
 			<a href="<?php the_permalink() ?>">
 				<?php the_title(); ?>

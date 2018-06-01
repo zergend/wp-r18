@@ -8,7 +8,7 @@
   &--extend {
     padding-right: 5px;
 
-    border-right: 1px solid @rekord-blue;
+    border-right: 1px solid @rekord-blue;    
   }
 
   &--current {
@@ -26,4 +26,13 @@
     border-left: none;
   }
 
+  &__link:hover {
+    padding: 2px 5px;
+    border: 1px solid @rekord-blue;
+    margin-left: -4px;
+    border-radius: 2px;
+    color: @light-text-color;
+    background-color: @rekord-blue;
+    .transition(all, 0.2s, linear);
+  }
 }
