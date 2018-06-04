@@ -49,6 +49,29 @@
     ?>
     </nav>
 
+
+    <script>
+      $(document).ready(function () {
+        $('.menu-item-has-children > a').click(function(){
+          $('.menu-item-has-children ul').slideUp();
+          if ($(this).next().is(":visible")){
+              $(this).next().slideUp();
+          } else {
+          $(this).next().slideToggle();
+          }
+          return false;
+        });
+          $('.menu-vertical > ul > li > a').click(function(){
+        $('.menu-vertical > ul > li > a, .menu-item-has-children a').removeClass('active');
+        $(this).addClass('active');
+      }),
+          $('.menu-item-has-children ul li a').click(function(){
+        $('.menu-item-has-children ul li a').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+    </script>
+
     <script>
       var navMain = document.querySelector('.menu-vertical');
       var navToggle = document.querySelector('.menu-vertical__toggle');

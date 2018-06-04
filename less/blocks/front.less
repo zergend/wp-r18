@@ -82,10 +82,12 @@
       font-size: 16px;
       box-sizing: border-box;
       text-indent: 20px;
+      text-align: justify;
 
       @media @mobile-widths {
         margin-left: 290px;
         text-indent: 0;
+        text-align: left;
       }      
 
       @media @desktop-widths {
@@ -220,14 +222,19 @@
     & article {
       box-sizing: border-box;
       width: 280px;
-      float: left;
+      float: none;
       text-align: center;
-      margin-left: 15px;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin: 20px auto;
       font-size: 16px;
       .box-shadow();
       border-bottom: 2px solid @rekord-red;
+
+      @media @desktop-widths {
+        float: left;
+        margin-left: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }  
     }
 
     &--title {

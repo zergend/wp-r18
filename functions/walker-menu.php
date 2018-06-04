@@ -40,8 +40,20 @@ function start_lvl( &$output, $depth = 0, $args = array() ) {
 	$class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
 
 	// build html
-	$output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '">';
+	// $has_children = 'menu-item-has-children';
+	// $pos = strpos($depth_class_names, $has_children);
 
+	// Заметьте, что используется ===.  Использование == не даст верного 
+	// результата, так как 'a' находится в нулевой позиции.
+	// echo '-= START =-' . $depth_class_names . '-= END =-';
+	$output .= $indent . '<input type="checkbox" checked><i></i><li id="nav-menu-item-'. $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '">';
+
+	/* if ($pos === false) {
+		$output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '">';
+	} else {
+		$output .= $indent . '<input type="checkbox" checked><i></i><li id="nav-menu-item-'. $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '">';
+	}	 */
+	
 	// link attributes
 	$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
 	$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
@@ -63,6 +75,7 @@ function start_lvl( &$output, $depth = 0, $args = array() ) {
 }
 }
 
+///////////////////////////////////////////////
 // свой класс построения меню (горизонтальное):
 class walker_horizontal_nav_menu extends Walker_Nav_Menu {
 
