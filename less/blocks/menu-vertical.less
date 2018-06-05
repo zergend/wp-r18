@@ -173,89 +173,155 @@
   /* ============ */
   overflow: hidden;
 
-& ul {
-    margin: 0;
-    padding:0;
-    list-style: none;
-}
-& > ul > li {
-    position: relative;
-}
-& > ul > li > a {
-    display: block;	
-    padding: .7em 1em;	
-    outline: 0;	
-    border-bottom: 1px solid #222;
-    background: #333;
-    background-image:-webkit-linear-gradient(#444, #333);
-    background-image:-moz-linear-gradient(#444, #333);
-    background-image:-ms-linear-gradient(#444, #333);
-    background-image:linear-gradient(#444, #333);
-    -webkit-box-shadow:inset 0 1px 0 0 rgba(250,250,250,0.1);
-    -moz-box-shadow:inset 0 1px 0 0 rgba(250,250,250,0.1);
-    box-shadow:inset 0 1px 0 0 rgba(250,250,250,0.1);
-    color:#C9C9C9;
-    text-decoration: none;	
-    text-shadow: 1px 1px 3px #111;	
-    font-weight: normal;
-}
-& > ul > li > a:hover, 
-& > ul > li > a.active {
-    color:#f2bd00;
-}
-& .menu-item-has-children  ul {
+  & input {
     display: none;
-    overflow: hidden;
-    background: #eee;
-    -webkit-box-shadow:inset 0 0 50px #bbb;
-    -moz-box-shadow:inset 0 0 50px #bbb;
-    box-shadow:inset 0 0 50px #bbb;
-}
-& .menu-item-has-children ul li a {
+  } 
+/* =========== css only ================ */
+  /* заголовки панелей аккордеона */
+  & .main-menu-item {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
     display: block;
-    padding: .7em 1em;
-    border-bottom: 1px dotted #bababa;
-    color:#514b92;
-    font-size: 12px;
-    text-decoration: none;
-}
-& .menu-item-has-children ul li a:hover,
-& .menu-item-has-children ul li a.active {
-    padding-left: 1.3em;
-    background: #d8d8d8;
-    color: red;
-}
-& .menu-item-has-children ul li a:after{
-    float: left;
-    margin-right:6px;
-    content: "»";
-    line-height: 12px;
-}
-& .menu-item-has-children > a:before {
-    content:'•';
-    height:12px;
-    width:12px;
-    font-size: 1em;
-    display:inline-block;
-    position: absolute;
-    right: 10px;
-    top: 12px;
-    background: #333;
-    line-height: .8em;
-    color: red;
-    text-indent: 0;
-    text-align: center;
-    text-shadow:none;
-    font-weight: 500;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
-    -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .26), 0px 1px 0px 0px rgba(255, 255, 255, .15);
-    -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .26), 0px 1px 0px 0px rgba(255, 255, 255, .15);
-    box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .26), 0px 1px 0px 0px rgba(255, 255, 255, .15);
-}
-/* активный переключатель */
-& .menu-item-has-children > a.active:before{
-    color: #f2bd00;
-}
+    margin: 0;
+    padding: 10px 25px;
+    cursor: pointer;
+    color: #f4f4f4;
+    background: #2d8bbb;
+    border-top: 1px solid #3face4;
+    border-bottom: 1px solid #2479a5;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* заголовки панелей аккордеона при наведении
+  * в данном варианте не срабатывает
+  */
+  /* & h2:hover {
+    display: block;
+    background-color: #005049;
+  }
+  */
+
+  /* Формируем блоки с содерханием */
+  .menu-item-has-children {
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+  }
+
+  /* оформляем параграфы */
+  .menu-item-has-children a {
+  color: rgba(48, 69, 92, 0.8);
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  padding: 0 20px
+  }
+
+  /* Позаботимся о небольших экранах */
+  /* @media (max-width: 550px) {
+  & {
+    box-sizing: border-box;
+    transform: translate(0, 0);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    left: 0;
+  }
+  } */
+
+  /* Формируем неупорядоченный список */
+  & ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+  }
+
+  /* Определяем и формируем отдельный элемент списка 
+  * в который поместим скрытый флажек,
+  * заголовок панелей и блок с содержанием
+  */
+  & ul li.menu-item-has-children {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  }
+
+  /* устанавливаем время ожидания перед воспроизведением анимации 
+  * на основе нумерации в дереве элементов
+  */
+  & ul li.menu-item-has-children:nth-of-type(1) {
+  animation-delay: 0.5s;
+  }
+  & ul li.menu-item-has-children:nth-of-type(2) {
+  animation-delay: 0.75s;
+  }
+  & ul li.menu-item-has-children:nth-of-type(3) {
+  animation-delay: 1s;
+  }
+  & ul li.menu-item-has-children:last-of-type {
+  padding-bottom: 0;
+  }
+
+  /* Сформируем  указатель переключения состояния аккордеона */
+  & ul li.menu-item-has-children i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  /* расположим указатель на панели заголовка справа */
+  right: 25px;
+  }
+
+  /* "Рисуем " сам указатель */
+  & ul li.menu-item-has-children i:before, & ul li.menu-item-has-children i:after {
+  content: "";
+  position: absolute;
+  background-color: #eee;
+  width: 3px;
+  height: 9px;
+  }
+  /* Добавляем элемент трансформации указателя при переключении */
+  & ul li.menu-item-has-children i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+  }
+  & ul li.menu-item-has-children i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+  }
+
+  /* Делаем чекбокс скрытым*/
+  & ul li.menu-item-has-children input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  }
+  /* Когда у флажка установлен checked  
+  * блок с содержанием скрыт
+  */
+  & ul li.menu-item-has-children input[type=checkbox]:checked ~ div.msg {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+  }
+  /* А указатель показывает вниз */
+  & ul li.menu-item-has-children input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+  }
+  & ul li.menu-item-has-children input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+  }
+  /*  Устанавливаем эффект перехода
+  * между двумя состояниями указателя 
+  */
+  .menu-item-has-children, ul li.menu-item-has-children i:before, ul li.menu-item-has-children i:after {
+    transition: all 0.5s ease-in-out;
+  }
 }

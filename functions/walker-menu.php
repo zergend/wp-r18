@@ -46,7 +46,7 @@ function start_lvl( &$output, $depth = 0, $args = array() ) {
 	// Заметьте, что используется ===.  Использование == не даст верного 
 	// результата, так как 'a' находится в нулевой позиции.
 	// echo '-= START =-' . $depth_class_names . '-= END =-';
-	$output .= $indent . '<input type="checkbox" checked><i></i><li id="nav-menu-item-'. $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '">';
+	$output .= $indent . '<input type="checkbox" checked><i></i><li id="nav-menu-item-' . $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '">';
 
 	/* if ($pos === false) {
 		$output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '">';
