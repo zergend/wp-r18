@@ -171,11 +171,11 @@
 
 
   /* ============ */
-  overflow: hidden;
+  /* overflow: hidden;
 
   & input {
     display: none;
-  } 
+  }  */
 /* =========== css only ================ */
   /* заголовки панелей аккордеона */
   & .main-menu-item {
@@ -268,7 +268,7 @@
   }
 
   /* Сформируем  указатель переключения состояния аккордеона */
-  & ul li.menu-item-has-children i {
+  & ul > li.menu-item-has-children i {
   position: absolute;
   transform: translate(-6px, 0);
   margin-top: 16px;
@@ -277,7 +277,7 @@
   }
 
   /* "Рисуем " сам указатель */
-  & ul li.menu-item-has-children i:before, & ul li.menu-item-has-children i:after {
+  & ul > li.menu-item-has-children i:before, & ul > li.menu-item-has-children i:after {
   content: "";
   position: absolute;
   background-color: #eee;
@@ -285,10 +285,10 @@
   height: 9px;
   }
   /* Добавляем элемент трансформации указателя при переключении */
-  & ul li.menu-item-has-children i:before {
+  & ul > li.menu-item-has-children i:before {
   transform: translate(-2px, 0) rotate(45deg);
   }
-  & ul li.menu-item-has-children i:after {
+  & ul > li.menu-item-has-children i:after {
   transform: translate(2px, 0) rotate(-45deg);
   }
 
@@ -305,7 +305,7 @@
   /* Когда у флажка установлен checked  
   * блок с содержанием скрыт
   */
-  & ul li.menu-item-has-children input[type=checkbox]:checked ~ div.msg {
+  & ul li.menu-item-has-children input[type=checkbox]:checked ~ ul.sub-menu {
   margin-top: 0;
   max-height: 0;
   opacity: 0;
