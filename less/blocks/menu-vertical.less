@@ -1,12 +1,18 @@
 .menu-vertical {
   position: relative;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 0;
   border-top: 1px solid @light-text-color;
+  padding-top: 30px;
+  @media @tablet-widths {
+    padding-top: 0;
+    margin-top: 10px;
+  }
 
   &--info {
-    margin-top: 10px;
-    @media @mobile-widths {
+    margin-top: 0;
+    padding-top: 0;
+    @media @tablet-widths {
       margin-top: 50px;
     }
   }
@@ -19,7 +25,7 @@
   }
 
   &__toggle {
-    /* position: absolute; */
+    position: absolute;
     z-index: 45;
     top: 0;
     right: 0;
