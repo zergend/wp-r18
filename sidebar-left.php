@@ -17,7 +17,7 @@
       'after'           => '',
       'link_before'     => '',
       'link_after'      => '',
-      'items_wrap'      => '<div class="msg"><ul id="%1$s" class="%2$s">%3$s</ul></div>',
+      'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
       'depth'           => 0,
       'walker'          => new walker_vertical_nav_menu
     ) );

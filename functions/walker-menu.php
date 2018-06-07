@@ -40,19 +40,22 @@ function start_lvl( &$output, $depth = 0, $args = array() ) {
 	$class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
 
 	// build html
-	// $has_children = 'menu-item-has-children';
-	// $pos = strpos($depth_class_names, $has_children);
+	$has_children = 'menu-item-has-children';
+	$pos = strpos($output, $has_children);
 
 	// Заметьте, что используется ===.  Использование == не даст верного 
 	// результата, так как 'a' находится в нулевой позиции.
-	// echo '-= START =-' . $depth_class_names . '-= END =-';
-	$output .= $indent . '<li id="nav-menu-item-' . $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '"><input type="checkbox" checked><i></i>';
-
-	/* if ($pos === false) {
-		$output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '">';
+	// echo '-= START =-';
+	// var_dump($args);
+	// echo '-= END =-';
+	// $output .= $indent . '<li id="nav-menu-item-' . $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '"><input type="checkbox" checked><i></i>';
+	// if ( $args->has_children && $depth === 0 )
+	// if ($pos > 0)
+	if ($args->walker->has_children) {
+		$output .= $indent . '<li id="nav-menu-item-' . $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '"><input type="checkbox" checked><i></i>';
 	} else {
-		$output .= $indent . '<input type="checkbox" checked><i></i><li id="nav-menu-item-'. $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '">';
-	}	 */
+		$output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="menu-vertical__item ' . $depth_class_names . ' ' . $class_names . '">';
+	}	
 	
 	// link attributes
 	$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';

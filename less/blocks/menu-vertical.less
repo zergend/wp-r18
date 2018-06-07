@@ -1,14 +1,16 @@
 .menu-vertical {
   position: relative;
-
+  overflow: hidden;
   margin-top: 20px;
   border-top: 1px solid @light-text-color;
 
   &--info {
-    margin-top: 50px;
+    margin-top: 10px;
+    @media @mobile-widths {
+      margin-top: 50px;
+    }
   }
-
-  /*
+  
   & h3 {
     margin: 0;
     padding: 10px 5px;
@@ -17,7 +19,7 @@
   }
 
   &__toggle {
-    position: absolute;
+    /* position: absolute; */
     z-index: 45;
     top: 0;
     right: 0;
@@ -82,8 +84,7 @@
       background-color: rgba(255, 255, 255, 0.3);
     }
   }
-  */
-
+  
   @media @mobile-widths-only {
     &--closed &__item {
       display: none;
@@ -102,20 +103,17 @@
     display: block;
   }
 
-  /* 
+   
   &__item {
     position: relative;
-
-    &.menu-item-has-children>a {
-      background-image: url("img/r_arr.png");
-      background-repeat: no-repeat;
-      background-position: right center;
-    }
-
-    &:hover > ul.sub-menu {
-      display: block;
-    }
-  
+    
+    &.menu-item-has-children>a:hover,
+    &.menu-item-has-children:hover {
+        cursor: pointer;
+        color: @light-text-color;
+        background-color: @rekord-red;
+    } 
+ 
     & a {
       display: block;
 
@@ -133,7 +131,21 @@
       }
     }
 
+    &.sub-menu-item a {
+      color: @rekord-blue;
+      background-color: @base-bg-color;
+      border-bottom: 1px solid #ccc;
+      padding-left: 20px;
+
+      &:hover {
+        cursor: pointer;
+        color: @light-text-color;
+        background-color: @rekord-red;
+      }
+    }
+
     &.current-menu-item a {
+      color: @light-text-color;
       background-color: @rekord-red;
     }
   }
@@ -152,34 +164,13 @@
   &__list {
     text-align: left;
 
-    .clear-list-style();
-
-    &.sub-menu {
-      position:absolute;
-    	z-index: 50;
-    	top: -5px;
-    	left: 275px;
-
-    	display: none;
-
-    	width: 250px;
-
-      .box-shadow();
-    }
+    .clear-list-style();  
   }
-  */
-
-
-  /* ============ */
-  /* overflow: hidden;
-
-  & input {
-    display: none;
-  }  */
+  
 /* =========== css only ================ */
   /* заголовки панелей аккордеона */
   & .main-menu-item {
-    font-size: 16px;
+    /* font-size: 16px;
     font-weight: 300;
     letter-spacing: 1px;
     display: block;
@@ -193,6 +184,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    */
   }
   /* заголовки панелей аккордеона при наведении
   * в данном варианте не срабатывает
@@ -214,11 +206,12 @@
 
   /* оформляем параграфы */
   .menu-item-has-children a {
-  color: rgba(48, 69, 92, 0.8);
+  /* color: rgba(48, 69, 92, 0.8);
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 1px;
   padding: 0 20px
+  */
   }
 
   /* Позаботимся о небольших экранах */
@@ -235,10 +228,11 @@
 
   /* Формируем неупорядоченный список */
   & ul {
-  list-style: none;
+  /* list-style: none;
   perspective: 900;
   padding: 0;
   margin: 0;
+  */
   }
 
   /* Определяем и формируем отдельный элемент списка 
@@ -271,9 +265,9 @@
   & ul > li.menu-item-has-children i {
   position: absolute;
   transform: translate(-6px, 0);
-  margin-top: 16px;
+  margin-top: 10px;
   /* расположим указатель на панели заголовка справа */
-  right: 25px;
+  right: 10px;  
   }
 
   /* "Рисуем " сам указатель */
