@@ -13,7 +13,13 @@
 	while (have_posts()) : the_post();
 	?>
 	<article>
-		<div class="front__anounce--title">		
+		<?php
+		if( is_sticky( $post_ID ) ){
+			echo '<div class="front__anounce--title  front__anounce--sticky">';
+		} else {
+			echo '<div class="front__anounce--title">';
+		}
+		?>		
 			<a href="<?php the_permalink() ?>">
 				<?php the_title(); ?>
 			</a>
