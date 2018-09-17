@@ -27,7 +27,11 @@ function init () {
     
     // Наша метка, указываем коордианты
     myGeoObjects = new ymaps.Placemark([53.925304, 40.043489],{
-                    balloonContentBody: 'Физкультурно-оздоровительный комплекс, адрес: г. Кораблино, ул. Маяковского, 30В; тел.: +7 (49143) 5-17-76; e-mail: fskrekord@mail.ru; сайт: rekord.korablino62.ru',
+        balloonContentBody: 'Физкультурно-оздоровительный комплекс</br>'+
+					'адрес: г. Кораблино, ул. Маяковского, 30В</br>'+
+					'тел.: +7 (49143) 5-17-76</br>'+
+					'e-mail: fskrekord@mail.ru</br>'+
+					'сайт: <a href="http://rekord.korablino62.ru">rekord.korablino62.ru</a>'
                     },{
                     iconLayout: 'default#image',
                     // Путь до нашей картинки
