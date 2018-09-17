@@ -1,13 +1,54 @@
 <?php
 /**
  * Yandex map
- * (код создан в конструкторе Яндекс.Карты)
+ * (код НЕ создан в конструкторе Яндекс.Карты)
  *
  */
 ?>
 
-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab78a600cce8f2f66a1b6363afa67bad32ac174df93e0a6222315d57014e77f8d&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=false"></script>
 
-	
+<div id="map" style="width: 100%; height: 400px"></div>
 
+<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map("map", {
+        // Центр карты, указываем коордианты
+        center:[53.925228, 40.042502],
+        // Масштаб, тут все просто
+        zoom: 16,
+        // Отключаем все элементы управления
+        // controls: []
+    }); 
+            
+    var myGeoObjects = [];
+    
+    // Наша метка, указываем коордианты
+    myGeoObjects = new ymaps.Placemark([53.925304, 40.043489],{
+                    balloonContentBody: 'Физкультурно-оздоровительный комплекс, адрес: г. Кораблино, ул. Маяковского, 30В; тел.: +7 (49143) 5-17-76; e-mail: fskrekord@mail.ru; сайт: rekord.korablino62.ru',
+                    },{
+                    iconLayout: 'default#image',
+                    // Путь до нашей картинки
+                    iconImageHref: 'img/rekord-rl-balloon.png', 
+                    // Размер по ширине и высоте
+                    iconImageSize: [33, 47],
+                    // Смещение левого верхнего угла иконки относительно
+                    // её «ножки» (точки привязки).
+                    iconImageOffset: [-10, -50]
+    });
+                
+    var clusterer = new ymaps.Clusterer({
+        clusterDisableClickZoom: false,
+        clusterOpenBalloonOnClick: false,
+    });
+    
+    clusterer.add(myGeoObjects);
+    myMap.geoObjects.add(clusterer);
+    // Отлючаем возможность изменения масштаба
+    myMap.behaviors.disable('scrollZoom');
+
+}
+</script>    
 
