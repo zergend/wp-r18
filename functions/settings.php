@@ -2,8 +2,8 @@
 class ControlPanel {
 // Устанавливаем значения по умолчанию
 var $default_settings = array(
- 'phone' => '+7 (49143) 5-04-25',
- 'email' => 'korablino@ryazangov.ru'
+ 'phone' => '+7 (49143) 5-17-76',
+ 'email' => 'fskrekord@mail.ru'
  );
  var $options;
 

@@ -65,7 +65,7 @@ endif;
 add_action( 'after_setup_theme', 'rekord18_setup' );
 
 // включение поддержки форматов постов
-add_theme_support( 'post-formats', array('aside', 'gallery', 'image', 'video') );
+add_theme_support( 'post-formats', array('gallery', 'image', 'video', 'aside') );
 
 
 /**
